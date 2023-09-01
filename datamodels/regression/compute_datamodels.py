@@ -95,7 +95,8 @@ def make_loader(subset, data_path=None, num_workers=None,
                       'idx': [IntDecoder(),
                               ToTensor(),
                               Squeeze(),
-                              ToDevice(ch.device('cuda:0'))]
+                              #ToDevice(ch.device('cuda:0'))
+                              ]
                   }, recompile=False)
 
 
